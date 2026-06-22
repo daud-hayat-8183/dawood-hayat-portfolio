@@ -16,7 +16,6 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {
         ignored: ['**/ChatGPT Image*.png', '**/*.pdf']
       },
-      allowedHosts: true,
     },
   };
 });
