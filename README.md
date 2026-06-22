@@ -6,7 +6,7 @@ A premium interactive portfolio showcasing Dawood Hayat’s work across business
 
 ## Live Website
 
-[Visit Portfolio Website]([https://your-real-vercel-url.vercel.app](https://dawood-hayat-portfolio.vercel.app/))
+[Visit My Portfolio Website](https://dawood-hayat-portfolio.vercel.app/)
 
 ## Portfolio Highlights
 
@@ -147,18 +147,18 @@ Copy `.env.example` to `.env.local` for local configuration. Never commit `.env.
 
 ## Deployment
 
-- GitHub stores source code.
-- Vercel is recommended for production deployment.
-- Vercel should be connected to this repository.
-- Environment variables must be configured in Vercel project settings.
-- Do not use GitHub Pages for secure server-side contact API functionality.
+This portfolio is deployed on Vercel:
+
+[https://dawood-hayat-portfolio.vercel.app/](https://dawood-hayat-portfolio.vercel.app/)
+
+GitHub stores and manages the source code, while Vercel builds and serves the public website.
 
 ## Contact
 
 - Email: [daudhayat51@gmail.com](mailto:daudhayat51@gmail.com)
 - WhatsApp: [Message me on WhatsApp](https://wa.me/923295129250)
 - LinkedIn: [Add LinkedIn URL]
-- Portfolio: [Add Live Portfolio URL]
+- Portfolio: [dawood-hayat-portfolio.vercel.app](https://dawood-hayat-portfolio.vercel.app/)
 
 ---
 
