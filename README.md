@@ -6,7 +6,7 @@ A premium interactive portfolio showcasing Dawood Hayat’s work across business
 
 ## Live Website
 
-[Visit Portfolio Website]([PASTE_LIVE_WEBSITE_URL_HERE](https://dawood-hayat-portfolio.vercel.app/))
+[Visit Portfolio Website]([https://your-real-vercel-url.vercel.app](https://dawood-hayat-portfolio.vercel.app/))
 
 ## Portfolio Highlights
 
