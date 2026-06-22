@@ -17,6 +17,7 @@ export interface Project {
   link?: string;
   githubUrl?: string;
   demoUrl?: string;
+  externalActionLabel?: string;
   metrics?: { label: string; value: string }[];
 }
 
@@ -30,7 +31,7 @@ export const profile = {
   phoneE164: "+923295129250",
   whatsappUrl: "https://wa.me/923295129250?text=Hi%20Dawood%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20data%2C%20finance%2C%20FinTech%2C%20or%20web%20project.",
   githubUrl: "https://github.com/daud-hayat-8183",
-  linkedinUrl: "https://linkedin.com/in/dawood-hayat-analytics", // Professional brand slug
+  linkedinUrl: "https://www.linkedin.com/in/dawoodhayat/",
   resumePath: "/Dawood-Hayat-Resume.pdf",
 };
 
@@ -89,6 +90,8 @@ export const projectsData: Project[] = [
     description: "Comparative financial performance analysis using ratio analysis, trend evaluation and valuation metrics.",
     imageAlt: "A clean, light-mode dashboard showing financial analysis charts for Safe Mix Concrete and Thatta Cement. The UI is minimalist, using white glassmorphism panels, soft green accents, and precise editorial typography. The charts display comparative bar graphs and line trends.",
     imageUrl: "/financial-analysis.png",
+    githubUrl: "https://github.com/daud-hayat-8183/Financial-Analysis-SafeMix-ThattaCement",
+    externalActionLabel: "View Repository",
     tags: ["Ratio Analysis", "Stock Analysis", "Excel", "Finance"],
     metrics: [
       { label: "Analyzed Years", value: "2023 - 2025" },
@@ -114,6 +117,8 @@ export const projectsData: Project[] = [
     description: "Machine Learning model to predict whether a movie will be a hit or flop based on core features using classification and regression.",
     imageAlt: "A sleek, modern web application interface for an IMDb Movie Success Predictor. The design features a translucent glass-like data entry form over a very soft, blurred cinematic background. A prominent 'Prediction: Will be a HIT' result is visible in green.",
     imageUrl: "/imdb-predictor.png",
+    githubUrl: "https://github.com/daud-hayat-8183/imdb-business-data-analytics",
+    externalActionLabel: "View Repository",
     tags: ["Python", "Logistic Regression", "Classification", "Streamlit"],
     metrics: [
       { label: "Model Type", value: "Logistic Regression" },
@@ -139,6 +144,8 @@ export const projectsData: Project[] = [
     description: "Interactive web app to explore planets, facts, and space data with immersive visual elements and an AI tutor.",
     imageAlt: "A visually striking dark-mode interactive web application titled 'Explore the Solar System'. The screen shows 3D models of planets floating in a dark, starry void, juxtaposed against crisp white text and minimalist control panels, fitting the high-end digital product vibe.",
     imageUrl: "/solar-system.png",
+    demoUrl: "https://daud-hayat-8183.github.io/solar-system-explorer/",
+    externalActionLabel: "Visit Live Website",
     tags: ["React", "TypeScript", "Express", "Interactive"],
     metrics: [
       { label: "Framework", value: "React 19 & TS" },

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ChevronRight, MessageSquare, Layers, Terminal } from "lucide-react";
-import { projectsData, processSteps } from "../data";
+import { ChevronRight, MessageSquare, Layers, Terminal, Linkedin, Github } from "lucide-react";
+import { projectsData, processSteps, profile } from "../data";
 import { useTheme } from "../context/ThemeContext";
 import lightPortrait from "../assets/hero/pic-light-mode.png";
 import darkPortrait from "../assets/hero/pic-dark-mode.png";
@@ -76,6 +76,29 @@ export default function Home() {
             <a href="#contact" className="glass-pill text-text-primary rounded-full py-3.5 px-6 text-xs font-semibold font-mono tracking-wider flex items-center gap-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_15px_var(--glow-blue)] cursor-pointer hover:bg-text-primary/5 group">
               <span className="relative z-10 flex items-center gap-2">CHAT SECURELY <MessageSquare className="w-3.5 h-3.5 text-accent-primary group-hover:scale-110 transition-transform" /></span>
             </a>
+            
+            <div className="flex items-center gap-3 sm:ml-2">
+              <a 
+                href={profile.linkedinUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="View Dawood Hayat on LinkedIn" 
+                title="View Dawood Hayat on LinkedIn" 
+                className="glass-pill w-11 h-11 flex items-center justify-center rounded-full text-text-secondary hover:text-accent-cyan hover:border-accent-cyan/30 hover:bg-accent-cyan/5 transition-all duration-300 hover:shadow-[0_0_15px_var(--glow-cyan)] hover:-translate-y-1"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a 
+                href={profile.githubUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="View Dawood Hayat on GitHub" 
+                title="View Dawood Hayat on GitHub" 
+                className="glass-pill w-11 h-11 flex items-center justify-center rounded-full text-text-secondary hover:text-accent-cyan hover:border-accent-cyan/30 hover:bg-accent-cyan/5 transition-all duration-300 hover:shadow-[0_0_15px_var(--glow-cyan)] hover:-translate-y-1"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-text-muted/20 mt-2">

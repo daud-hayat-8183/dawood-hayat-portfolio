@@ -232,16 +232,30 @@ export default function ProjectDetailsModal({ project, onClose }: ProjectDetails
         )}
 
         {/* Quick Footer Action Row */}
-        <div className="flex items-center justify-between border-t border-text-muted/20 pt-5 mt-6 relative z-10">
-          <span className="text-[10px] font-mono text-text-muted">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-text-muted/20 pt-5 mt-6 gap-4 relative z-10 pb-6 lg:pb-0">
+          <span className="text-[10px] font-mono text-text-muted hidden sm:block">
             Dawood Hayat Case Document
           </span>
-          <button
-            onClick={onClose}
-            className="text-xs font-mono text-text-primary bg-text-primary/10 hover:bg-text-primary/20 hover:shadow-[0_0_10px_var(--glow-cyan)] px-4 py-2 rounded-xl cursor-pointer transition-all"
-          >
-            Close Document
-          </button>
+          
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            {(project.githubUrl || project.demoUrl) && (
+              <a
+                href={project.githubUrl || project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-xs font-mono font-medium ${accent.bg}/10 hover:${accent.bg}/20 ${accent.color} border border-glass-border hover:border-${accent.color}/50 hover:shadow-[0_0_15px_${accent.glow}] px-4 py-2.5 sm:py-2 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-2 w-full sm:w-auto text-center shadow-sm`}
+                aria-label={`Open ${project.title} external link`}
+              >
+                {project.externalActionLabel || "View"} <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+            <button
+              onClick={onClose}
+              className="text-xs font-mono text-text-primary bg-text-primary/10 hover:bg-text-primary/20 hover:shadow-[0_0_10px_var(--glow-cyan)] px-4 py-2.5 sm:py-2 rounded-xl cursor-pointer transition-all w-full sm:w-auto text-center"
+            >
+              Close Document
+            </button>
+          </div>
         </div>
       </div>
     </div>

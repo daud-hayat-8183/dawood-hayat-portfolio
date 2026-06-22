@@ -104,7 +104,7 @@ export default function WorkIndex({ onSelectProject }: WorkIndexProps) {
                 </p>
               </div>
 
-              <div className="mt-5 pt-4 border-t border-text-muted/20 flex flex-wrap justify-between items-center gap-2">
+              <div className="mt-5 pt-4 border-t border-text-muted/20 flex flex-col xl:flex-row justify-between xl:items-center gap-3">
                 <div className="flex flex-wrap gap-1">
                   {project.tags.slice(0, 3).map((t, tidx) => (
                     <span key={tidx} className="px-2 py-0.5 glass-pill text-[9px] font-mono rounded-md text-text-secondary uppercase">
@@ -112,9 +112,23 @@ export default function WorkIndex({ onSelectProject }: WorkIndexProps) {
                     </span>
                   ))}
                 </div>
-                <span className="text-xs font-mono font-medium text-accent-cyan inline-flex items-center gap-0.5 group-hover:translate-x-1 transition-transform drop-shadow-[0_0_5px_var(--glow-cyan)]">
-                  Case Study <ArrowUpRight className="w-3.5 h-3.5" />
-                </span>
+                <div className="flex items-center gap-4 self-start xl:self-auto mt-1 xl:mt-0">
+                  {(project.githubUrl || project.demoUrl) && (
+                    <a
+                      href={project.githubUrl || project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-[11px] font-mono font-medium text-text-secondary hover:text-text-primary inline-flex items-center gap-1 transition-colors"
+                      aria-label={`Open ${project.title} external link`}
+                    >
+                      {project.externalActionLabel || "View"} <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  )}
+                  <span className="text-xs font-mono font-medium text-accent-cyan inline-flex items-center gap-0.5 group-hover:translate-x-1 transition-transform drop-shadow-[0_0_5px_var(--glow-cyan)]">
+                    Case Study <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
