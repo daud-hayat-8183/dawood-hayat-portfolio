@@ -49,8 +49,8 @@ export default function BottomNav() {
       className="fixed z-[60] lg:hidden left-0 w-full"
       style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
     >
-      <div className="mx-auto w-max px-2">
-        <nav className="glass-crystal rounded-full border border-glass-border-bright px-3 py-2.5 flex items-center gap-1 shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
+      <div className="mx-auto w-full max-w-[400px] px-2">
+        <nav className="glass-crystal rounded-full border border-glass-border-bright px-2 sm:px-3 py-2 flex items-center justify-between shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
@@ -60,7 +60,7 @@ export default function BottomNav() {
                 onClick={(e) => handleNavClick(e, item.path)}
                 title={`Go to ${item.name}`}
                 aria-label={`Go to ${item.name}`}
-                className={`relative w-[44px] h-[44px] flex items-center justify-center rounded-full transition-all duration-300 ${
+                className={`relative w-10 sm:w-11 h-10 sm:h-11 flex items-center justify-center rounded-full transition-all duration-300 ${
                   isActive 
                     ? "text-accent-primary shadow-[inset_0_0_15px_var(--glow-cyan)] bg-text-primary/10" 
                     : "text-text-secondary hover:text-text-primary hover:bg-text-primary/5"
@@ -83,7 +83,7 @@ export default function BottomNav() {
             onClick={toggleTheme}
             title="Toggle theme"
             aria-label="Toggle theme"
-            className="relative w-[44px] h-[44px] flex items-center justify-center rounded-full transition-all duration-300 text-text-secondary hover:text-text-primary hover:bg-text-primary/5 cursor-pointer"
+            className="relative w-10 sm:w-11 h-10 sm:h-11 flex items-center justify-center rounded-full transition-all duration-300 text-text-secondary hover:text-text-primary hover:bg-text-primary/5 cursor-pointer"
           >
             <div className="transition-transform duration-500">
               {isDarkMode ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}

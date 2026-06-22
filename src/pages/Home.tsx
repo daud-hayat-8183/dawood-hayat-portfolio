@@ -104,17 +104,17 @@ export default function Home() {
         <div className="lg:col-span-7 relative flex justify-center items-center h-[500px] sm:h-[600px] lg:h-[700px] z-10 group/portrait-area">
           
           {/* Luminous Background Blooms */}
-          <div className="absolute w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] rounded-full bg-accent-cyan/10 blur-[80px] -z-20 animate-pulse-slow group-hover/portrait-area:bg-accent-cyan/20 transition-colors duration-1000"></div>
-          <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full bg-accent-indigo/10 blur-[60px] translate-x-10 translate-y-10 -z-20 animate-aurora-drift group-hover/portrait-area:bg-accent-indigo/20 transition-colors duration-1000"></div>
+          <div className="absolute w-[350px] max-w-[90vw] h-[350px] max-h-[90vw] sm:w-[450px] sm:h-[450px] rounded-full bg-accent-cyan/10 blur-[80px] -z-20 animate-pulse-slow group-hover/portrait-area:bg-accent-cyan/20 transition-colors duration-1000"></div>
+          <div className="absolute w-[300px] max-w-[80vw] h-[300px] max-h-[80vw] sm:w-[400px] sm:h-[400px] rounded-full bg-accent-indigo/10 blur-[60px] translate-x-10 translate-y-10 -z-20 animate-aurora-drift group-hover/portrait-area:bg-accent-indigo/20 transition-colors duration-1000"></div>
 
           {/* Floral Liquid-Glass Rings */}
-          <div className="absolute w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] rounded-full border-[1.5px] border-glass-border opacity-20 scale-[1.05] animate-orbit-1 -z-10 group-hover/portrait-area:scale-[1.1] transition-transform duration-1000"></div>
-          <div className="absolute w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] rounded-full border border-glass-border opacity-30 scale-[1.15] animate-orbit-2 -z-10 rotate-12 group-hover/portrait-area:scale-[1.2] transition-transform duration-1000"></div>
-          <div className="absolute w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] rounded-full glass-mist opacity-10 scale-[1.0] animate-orbit-3 -z-10 -rotate-12 group-hover/portrait-area:opacity-25 transition-opacity duration-1000"></div>
-          <div className="absolute w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] rounded-full border border-accent-cyan/20 opacity-30 animate-pulse-slow -z-10 group-hover/portrait-area:border-accent-cyan/40 transition-colors duration-1000"></div>
+          <div className="absolute w-[320px] max-w-[85vw] h-[320px] max-h-[85vw] sm:w-[450px] sm:h-[450px] rounded-full border-[1.5px] border-glass-border opacity-20 scale-[1.05] animate-orbit-1 -z-10 group-hover/portrait-area:scale-[1.1] transition-transform duration-1000"></div>
+          <div className="absolute w-[300px] max-w-[80vw] h-[300px] max-h-[80vw] sm:w-[420px] sm:h-[420px] rounded-full border border-glass-border opacity-30 scale-[1.15] animate-orbit-2 -z-10 rotate-12 group-hover/portrait-area:scale-[1.2] transition-transform duration-1000"></div>
+          <div className="absolute w-[340px] max-w-[90vw] h-[340px] max-h-[90vw] sm:w-[480px] sm:h-[480px] rounded-full glass-mist opacity-10 scale-[1.0] animate-orbit-3 -z-10 -rotate-12 group-hover/portrait-area:opacity-25 transition-opacity duration-1000"></div>
+          <div className="absolute w-[280px] max-w-[75vw] h-[280px] max-h-[75vw] sm:w-[380px] sm:h-[380px] rounded-full border border-accent-cyan/20 opacity-30 animate-pulse-slow -z-10 group-hover/portrait-area:border-accent-cyan/40 transition-colors duration-1000"></div>
 
           {/* Portrait Image — Rounded, Soft-Blended */}
-          <div className="relative w-[300px] sm:w-[400px] lg:w-[480px] h-[450px] sm:h-[550px] lg:h-[650px] z-10 flex items-end justify-center group-hover/portrait-area:scale-[1.03] transition-transform duration-1000 pointer-events-none mt-10">
+          <div className="relative w-[300px] max-w-[85vw] sm:w-[400px] lg:w-[480px] h-[450px] sm:h-[550px] lg:h-[650px] z-10 flex items-end justify-center group-hover/portrait-area:scale-[1.03] transition-transform duration-1000 pointer-events-none mt-10">
             
             {/* soft outer glow layer */}
             <div className="absolute inset-0 rounded-[42px] bg-accent-blue/20 blur-[50px] scale-[0.9] -z-10 transition-colors duration-700" />

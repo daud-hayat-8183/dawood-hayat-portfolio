@@ -53,7 +53,7 @@ export default function App() {
     : null;
 
   return (
-    <div id="portfolio-root" className="relative text-text-primary min-h-screen selection:bg-accent-primary/20 selection:text-text-primary flex flex-col pb-24 lg:pb-0">
+    <div id="portfolio-root" className="relative text-text-primary min-h-screen selection:bg-accent-primary/20 selection:text-text-primary flex flex-col pb-24 lg:pb-0 overflow-x-clip">
       {/* ── Living Ambient Background Layers ── */}
       <div className="aurora-bg" />
       <div className="aurora-caustic-layer" />
