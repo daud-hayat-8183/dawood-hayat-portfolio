@@ -46,12 +46,12 @@ export default function WorkIndex({ onSelectProject }: WorkIndexProps) {
         </div>
 
         {/* Dynamic Category Filters */}
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex overflow-x-auto hide-scrollbar flex-nowrap gap-2 pb-2 -mx-6 px-6 md:mx-0 md:px-0 w-full lg:w-auto">
           {allCategories.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`px-4 py-2 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer whitespace-nowrap shrink-0 ${
                 activeFilter === filter
                   ? "bg-text-primary text-bg-base shadow-[0_0_15px_var(--glow-cyan)] scale-105"
                   : "glass-pill text-text-secondary hover:text-text-primary hover:bg-text-primary/5 hover:scale-105"

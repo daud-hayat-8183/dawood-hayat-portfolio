@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./components/Navigation";
+import BottomNav from "./components/BottomNav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import WorkIndex from "./pages/WorkIndex";
@@ -52,7 +53,7 @@ export default function App() {
     : null;
 
   return (
-    <div id="portfolio-root" className="relative text-text-primary min-h-screen selection:bg-accent-primary/20 selection:text-text-primary flex flex-col">
+    <div id="portfolio-root" className="relative text-text-primary min-h-screen selection:bg-accent-primary/20 selection:text-text-primary flex flex-col pb-24 lg:pb-0">
       {/* ── Living Ambient Background Layers ── */}
       <div className="aurora-bg" />
       <div className="aurora-caustic-layer" />
@@ -66,6 +67,7 @@ export default function App() {
 
       {/* ── Global Navigation ── */}
       <Navigation />
+      <BottomNav />
 
       {/* ── Single Page Composed Layout ── */}
       <main className="flex-grow">

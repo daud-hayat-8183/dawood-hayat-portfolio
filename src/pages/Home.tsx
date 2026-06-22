@@ -161,12 +161,12 @@ export default function Home() {
             <span className="font-mono text-[10px] sm:text-xs font-bold text-text-primary whitespace-nowrap">Predictive Modelling</span>
           </div>
 
-          <div className="absolute bottom-[5%] right-[10%] sm:right-[15%] lg:right-[18%] glass-pill px-4 py-2 rounded-full flex items-center gap-2 animate-orbit-2 shadow-[0_0_15px_var(--glow-cyan)] z-20 cursor-default hover:scale-110 hover:shadow-[0_0_25px_var(--glow-cyan)] hover:[animation-play-state:paused] transition-all duration-300" style={{ animationDelay: '-8s' }}>
+          <div className="hidden sm:flex absolute bottom-[5%] right-[10%] sm:right-[15%] lg:right-[18%] glass-pill px-4 py-2 rounded-full items-center gap-2 animate-orbit-2 shadow-[0_0_15px_var(--glow-cyan)] z-20 cursor-default hover:scale-110 hover:shadow-[0_0_25px_var(--glow-cyan)] hover:[animation-play-state:paused] transition-all duration-300" style={{ animationDelay: '-8s' }}>
             <span className="w-2 h-2 rounded-full bg-accent-cyan shadow-[0_0_8px_var(--glow-cyan)]"></span>
             <span className="font-mono text-[10px] sm:text-xs font-bold text-text-primary">FinTech</span>
           </div>
 
-          <div className="absolute top-[5%] left-[15%] sm:left-[20%] glass-pill px-3 py-1.5 rounded-full flex items-center gap-2 animate-orbit-3 shadow-[0_0_10px_var(--glow-indigo)] z-20 cursor-default hover:scale-110 hover:shadow-[0_0_20px_var(--glow-indigo)] hover:[animation-play-state:paused] transition-all duration-300 opacity-80" style={{ animationDelay: '-12s' }}>
+          <div className="hidden sm:flex absolute top-[5%] left-[15%] sm:left-[20%] glass-pill px-3 py-1.5 rounded-full items-center gap-2 animate-orbit-3 shadow-[0_0_10px_var(--glow-indigo)] z-20 cursor-default hover:scale-110 hover:shadow-[0_0_20px_var(--glow-indigo)] hover:[animation-play-state:paused] transition-all duration-300 opacity-80" style={{ animationDelay: '-12s' }}>
             <span className="font-mono text-[9px] sm:text-[10px] font-bold text-text-secondary">Data Analytics</span>
           </div>
         </div>

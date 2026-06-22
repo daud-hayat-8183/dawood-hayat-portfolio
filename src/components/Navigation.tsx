@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Sun, Moon, Menu, X, Download } from "lucide-react";
+import { Sun, Moon, Download } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 import { profile } from "../data";
 
 export default function Navigation() {
   const { isDarkMode, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   // Track scroll position for header blur
@@ -53,10 +52,7 @@ export default function Navigation() {
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
-    // Let native smooth scrolling handle anchor links, but we can intercept to close mobile menu
-    if (path.startsWith("#")) {
-      setIsMobileMenuOpen(false);
-    }
+    // Let native smooth scrolling handle anchor links
   };
 
   return (
@@ -87,7 +83,7 @@ export default function Navigation() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-1 glass-mist rounded-full p-1 border border-glass-border shadow-inner">
+          <div className="hidden lg:flex items-center gap-1 glass-mist rounded-full p-1 border border-glass-border shadow-inner">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -111,7 +107,7 @@ export default function Navigation() {
           </div>
 
           {/* Actions: CV & Theme */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             {/* Theme Toggle Orb */}
             <button
               onClick={toggleTheme}
@@ -146,68 +142,6 @@ export default function Navigation() {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden p-2 text-text-primary hover:text-accent-primary transition-colors cursor-pointer"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Dropdown Menu */}
-      <div 
-        className={`md:hidden absolute top-full left-0 w-full px-4 pt-2 transition-all duration-300 origin-top ${
-          isMobileMenuOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0 pointer-events-none"
-        }`}
-      >
-        <div className="glass-crystal rounded-3xl p-5 border border-glass-border shadow-2xl flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
-              return (
-                <a
-                  key={link.name}
-                  href={link.path}
-                  onClick={(e) => handleNavClick(e, link.path)}
-                  className={`text-sm font-mono tracking-wider p-3 rounded-xl transition-all cursor-pointer flex items-center gap-3 ${
-                    isActive 
-                      ? "bg-text-primary/10 text-accent-primary font-bold shadow-inner border border-glass-border drop-shadow-[0_0_5px_var(--glow-cyan)]" 
-                      : "text-text-secondary hover:bg-text-primary/5 hover:text-text-primary"
-                  }`}
-                >
-                  <div className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-accent-primary' : 'bg-transparent'}`} />
-                  {link.name}
-                </a>
-              );
-            })}
-          </div>
-          
-          <div className="h-[1px] w-full bg-glass-border" />
-          
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-mono text-text-muted">Appearance</span>
-            <button
-              onClick={toggleTheme}
-              className="relative w-12 h-6 rounded-full glass-mist border border-glass-border flex items-center p-0.5 cursor-pointer"
-            >
-              <div className={`w-4 h-4 rounded-full bg-text-primary flex items-center justify-center transition-transform duration-500 ${isDarkMode ? "translate-x-6" : "translate-x-0"}`}>
-                {isDarkMode ? <Moon className="w-2.5 h-2.5 text-bg-base" /> : <Sun className="w-2.5 h-2.5 text-bg-base" />}
-              </div>
-            </button>
-          </div>
-
-          <a 
-            href={profile.resumePath}
-            download="Dawood-Hayat-Resume.pdf"
-            aria-label="Download Dawood Hayat's resume PDF"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full text-center bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-xl py-3 text-xs font-bold font-mono tracking-widest cursor-pointer shadow-lg mt-2"
-          >
-            DOWNLOAD CV
-          </a>
         </div>
       </div>
     </nav>
