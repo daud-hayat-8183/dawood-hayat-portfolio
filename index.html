@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dawood Hayat — Business Data Analyst & Digital Product Builder</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Dawood Hayat is a Business Data Analyst and Digital Product Builder focused on data analytics, financial analysis, SQL systems, predictive modelling, FinTech, and interactive web products. Based in Islamabad, Pakistan." />
+    <meta name="author" content="Muhammad Dawood Hayat" />
+    <link rel="canonical" href="https://dawoodhayat.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dawood Hayat — Business Data Analyst & Digital Product Builder" />
+    <meta property="og:description" content="Portfolio showcasing data analytics, financial analysis, predictive modelling, and interactive web products." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dawood Hayat — Business Data Analyst & Digital Product Builder" />
+    <meta name="twitter:description" content="Portfolio showcasing data analytics, financial analysis, predictive modelling, and interactive web products." />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammad Dawood Hayat",
+      "alternateName": "Dawood Hayat",
+      "jobTitle": "Business Data Analyst & Digital Product Builder",
+      "url": "https://dawoodhayat.com",
+      "email": "daudhayat51@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Islamabad",
+        "addressCountry": "PK"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "COMSATS University Islamabad"
+      },
+      "knowsAbout": [
+        "Data Analytics",
+        "Financial Analysis",
+        "Oracle SQL",
+        "Python",
+        "Predictive Modelling",
+        "FinTech",
+        "React",
+        "Web Development"
+      ]
+    }
+    </script>
+
+    <!-- Premium Font Pairings: Cabinet Grotesk, Fraunces and Azeret Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300..700;1,300..700&family=Cabinet+Grotesk:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+
+    <!-- Theme Boot Script — prevents Flash of Incorrect Theme (FOIT) -->
+    <script>
+      (function() {
+        var savedTheme = localStorage.getItem('dawood-portfolio-theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-bg-base text-text-primary min-h-screen transition-colors duration-400">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

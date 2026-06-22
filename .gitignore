@@ -1,0 +1,19 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Exclude large local environment scratch files
+*.zip
+node-*/
+*.bak
+Dawood_Hayat_Portfolio_Design_and_Build_Brief.md
+metadata.json
+
+# Exclude root-level unsorted assets (allow public/src assets)
+/*.png
+/*.pdf
